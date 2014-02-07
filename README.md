@@ -5,7 +5,9 @@ NAICS 2007 is a node module containing data from the North American Industrial C
 
 ## Installation
 
-npm install naics-2007;
+```
+npm install naics-2007
+```
 
 ## Usage
 
@@ -18,11 +20,11 @@ NAICS.search('coffee');
 NAICS.find('123');
 #=> { code: 123 }
 
-NAICS.above('123');
-#=> [ { code: 12 }, { code: 1 } ]
+NAICS.above('926150');
+#=> [ { code: 92615 }, { code: 9261 }, { code: 926 }, { code: 92 } ]
 
-NAICS.below('123');
-#=> [ { code: 1231 }, { code: 1232 }... ]
+NAICS.below('9261');
+#=> [ { code: 92615 }, { code: 926150 }... ]
 ```
 
 ## Dataset Indexing
