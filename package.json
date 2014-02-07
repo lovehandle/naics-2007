@@ -1,0 +1,23 @@
+{
+  "name": "naics-2007",
+  "description": "A NAICS 2007 dataset module",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rclosner/naics-2007.git"
+  },
+  "author": "Ryan Closner",
+  "main": "lib/naics-2007.js",
+  "scripts": {},
+  "directories": {
+    "lib": "lib"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "devDependencies": {
+    "underscore": "1.5.x",
+    "underscore.inflections": "0.2.x"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+UTIL_DIR = process.cwd() + '/utils';
+DATA_DIR = process.cwd() + '/data';
+
+var fs = require('fs');
+var data = require(DATA_DIR + '/data');
+var tokenize = require(UTIL_DIR + '/tokenize');
+var buildIndex = require(UTIL_DIR + '/build-index');
+
+console.log('Building index');
+
+var index = buildIndex({
+  tokenize: tokenize,
+  objects: data,
+  properties: [ 'code', 'title', 'index', 'examples', 'description' ]
+})
+
+console.log('Writing file')
+
+fs.writeFile(DATA_DIR + '/data-index.json', JSON.stringify(index), function () {
+  console.log('Index successfully written to file!');
+}, function (err) {
+  console.log('An error occurred: '+ err);
+})
