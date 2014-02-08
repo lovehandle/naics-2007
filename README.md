@@ -5,26 +5,26 @@ NAICS 2007 is a node module containing data from the North American Industrial C
 
 ## Installation
 
-```
+```shell
 npm install naics-2007
 ```
 
 ## Usage
 
-```
+```javascript
 NAICS = require('naics-2007');
 
 NAICS.search('coffee');
-#=> [ { code:123 } ]
+//=> [ { code: 123 } ]
 
 NAICS.find('123');
-#=> { code: 123 }
+//=> { code: 123 }
 
 NAICS.above('926150');
-#=> [ { code: 92615 }, { code: 9261 }, { code: 926 }, { code: 92 } ]
+//=> [ { code: 92615 }, { code: 9261 }, { code: 926 }, { code: 92 } ]
 
 NAICS.below('9261');
-#=> [ { code: 92615 }, { code: 926150 }... ]
+//=> [ { code: 92615 }, { code: 926150 }... ]
 ```
 
 ## Dataset Indexing
@@ -33,7 +33,7 @@ In order to enable keyword-based searches on the NAICS 2007 dataset, we use a re
 
 In order to rebuild the index run the following command from the project directory:
 
-```
+```shell
 $ ./bin/build-index
 ```
 
