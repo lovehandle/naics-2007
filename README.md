@@ -14,6 +14,9 @@ npm install naics-2007
 ```javascript
 NAICS = require('naics-2007');
 
+NAICS.all();
+//=> [ { code: 123 } ]
+
 NAICS.search('coffee');
 //=> [ { code: 123 } ]
 
